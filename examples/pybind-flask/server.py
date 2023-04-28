@@ -71,6 +71,8 @@ def complete_string(complete: CompleteRequestDataclass):
     return return_string
  
  
+#POST body request example, json:
+# {"body": "To see the world in a grain of", "tokens": 10, "with_body": true}
 @app.route('/complete', methods=['POST'])
 def add_message():
     complete = CompleteRequestDataclass(**request.json)
